@@ -1,44 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 14:02:48 by pibreiss          #+#    #+#             */
-/*   Updated: 2024/11/07 14:11:44 by pibreiss         ###   ########.fr       */
+/*   Created: 2024/11/07 14:13:34 by pibreiss          #+#    #+#             */
+/*   Updated: 2024/11/07 14:58:49 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t count)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t			i;
-	unsigned char	*d;
-	unsigned char	*s;
+	size_t	dstlen;
+	size_t	srclen;
+	size_t	i;
+	size_t	j;
 
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	if (d == s || count == 0)
-		return (dest);
-	if (d < s)
+	dstlen = ft_strlen(dst);
+	srclen = ft_strlen(src);
+	i = 0;
+	j = dstlen;
+	if (dstlen >= size)
+		return (size + srclen);
+	while (j < size - 1 && src[i])
 	{
-		i = 0;
-		while (i < count)
-		{
-			d[i] = s[i];
-			i++;
-		}
+		dst[j] = src[i];
+		j++;
+		i++;
 	}
-	else
-	{
-		i = count;
-		while (i > 0)
-		{
-			i--;
-			d[i] = s[i];
-		}
-	}
-	return (d);
+	if (j < size)
+		dst[j] = '\0';
+	return (dstlen + srclen);
 }

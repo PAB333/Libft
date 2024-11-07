@@ -1,44 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 14:02:48 by pibreiss          #+#    #+#             */
-/*   Updated: 2024/11/07 14:11:44 by pibreiss         ###   ########.fr       */
+/*   Created: 2024/11/07 15:34:30 by pibreiss          #+#    #+#             */
+/*   Updated: 2024/11/07 15:50:42 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t count)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t			i;
-	unsigned char	*d;
-	unsigned char	*s;
+	size_t	slen;
 
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	if (d == s || count == 0)
-		return (dest);
-	if (d < s)
+	slen = ft_strlen(s);
+	if ((char)c == '\0')
+		return ((char *)&s[slen]);
+	while (slen > 0)
 	{
-		i = 0;
-		while (i < count)
+		slen--;
+		if (s[slen] == (char)c)
 		{
-			d[i] = s[i];
-			i++;
+			return ((char *)&s[slen]);
 		}
 	}
-	else
-	{
-		i = count;
-		while (i > 0)
-		{
-			i--;
-			d[i] = s[i];
-		}
-	}
-	return (d);
+	return (NULL);
 }
