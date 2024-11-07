@@ -6,13 +6,13 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:42:11 by pibreiss          #+#    #+#             */
-/*   Updated: 2024/11/06 14:53:01 by pibreiss         ###   ########.fr       */
+/*   Updated: 2024/11/07 13:18:08 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(char c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);
