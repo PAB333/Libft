@@ -1,31 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pab <pab@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 22:18:12 by pab               #+#    #+#             */
-/*   Updated: 2024/11/08 11:46:18 by pab              ###   ########.fr       */
+/*   Created: 2024/11/08 11:45:26 by pab               #+#    #+#             */
+/*   Updated: 2024/11/08 12:03:53 by pab              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	const unsigned char	*str;
-	unsigned char		character;
-	size_t				i;
+	char *	b;
+	char *	l;
+	size_t	i;
+	size_t	j;
 
-	str = (const unsigned char *)s;
-	character = (unsigned char)c;
+	b = (char *)big;
+	l = (char *)little;
 	i = 0;
-
-	while (i < n)
+	if (l[i] == '\0')
+		return (b);
+	while (b[i] && i < len)
 	{
-		if (str[i] == character)
-			return (void *)(str + i);
+		if (b[i] == l[0])
+		{
+			j = 0;
+			while (b[i + j] == l[j] && i + j < len)
+			{
+				if (l[j + 1] == '\0')
+					return (b + i);
+				j++;
+			}
+		}
 		i++;
 	}
 	return (NULL);
