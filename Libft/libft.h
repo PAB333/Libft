@@ -6,7 +6,7 @@
 /*   By: pab <pab@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:19:44 by pibreiss          #+#    #+#             */
-/*   Updated: 2024/11/08 11:47:55 by pab              ###   ########.fr       */
+/*   Updated: 2024/11/08 12:09:12 by pab              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp( const void * pointer1, const void * pointer2, size_t size );
 char	*ft_strnstr(const char *big, const char *little, size_t len);
+void	*ft_calloc( size_t elementCount, size_t elementSize );
 
 #endif
