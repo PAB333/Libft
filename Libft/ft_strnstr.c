@@ -6,7 +6,7 @@
 /*   By: pab <pab@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:45:26 by pab               #+#    #+#             */
-/*   Updated: 2024/11/08 12:03:53 by pab              ###   ########.fr       */
+/*   Updated: 2024/11/08 12:42:51 by pab              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	char *	b;
-	char *	l;
+	char	*b;
+	char	*l;
 	size_t	i;
 	size_t	j;
 

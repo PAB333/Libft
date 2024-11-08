@@ -6,7 +6,7 @@
 /*   By: pab <pab@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 12:08:16 by pab               #+#    #+#             */
-/*   Updated: 2024/11/08 12:20:55 by pab              ###   ########.fr       */
+/*   Updated: 2024/11/08 12:40:08 by pab              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_calloc( size_t elementCount, size_t elementSize )
 {
-	void *	array;
+	void	*array;
 
 	array = malloc(elementCount * elementSize);
 	if (array == NULL)
