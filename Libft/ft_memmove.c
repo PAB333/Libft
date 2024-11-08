@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pab <pab@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:02:48 by pibreiss          #+#    #+#             */
-/*   Updated: 2024/11/07 14:11:44 by pibreiss         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:55:45 by pab              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,20 +24,16 @@ void	*ft_memmove(void *dest, const void *src, size_t count)
 		return (dest);
 	if (d < s)
 	{
-		i = 0;
-		while (i < count)
-		{
+		i = -1;
+		while (++i < count)
 			d[i] = s[i];
-			i++;
-		}
 	}
 	else
 	{
-		i = count;
-		while (i > 0)
+		while (count > 0)
 		{
-			i--;
-			d[i] = s[i];
+			count--;
+			d[count] = s[count];
 		}
 	}
 	return (d);
