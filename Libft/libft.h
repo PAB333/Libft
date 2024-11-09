@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:19:44 by pibreiss          #+#    #+#             */
-/*   Updated: 2024/11/08 14:56:34 by pibreiss         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:50:06 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ int		ft_memcmp(const void *pointer1, const void *pointer2, size_t size);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 void	*ft_calloc( size_t elementCount, size_t elementSize );
 char	*ft_strdup(const char *source);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif

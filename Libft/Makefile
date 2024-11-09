@@ -6,7 +6,7 @@
 #    By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/05 15:50:32 by pibreiss          #+#    #+#              #
-#    Updated: 2024/11/08 14:56:45 by pibreiss         ###   ########.fr        #
+#    Updated: 2024/11/09 15:50:21 by pibreiss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
       ft_isdigit.c ft_isprint.c ft_memcpy.c ft_memmove.c ft_memset.c \
       ft_strlen.c ft_tolower.c ft_toupper.c ft_strlcpy.c ft_strlcat.c \
 	  ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c\
-	  ft_strnstr.c ft_calloc.c ft_strdup.c
+	  ft_strnstr.c ft_calloc.c ft_strdup.c ft_substr.c
 
 OBJ = $(SRC:.c=.o)
 
