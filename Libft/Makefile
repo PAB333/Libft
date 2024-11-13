@@ -6,7 +6,7 @@
 #    By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/05 15:50:32 by pibreiss          #+#    #+#              #
-#    Updated: 2024/11/13 16:44:19 by pibreiss         ###   ########.fr        #
+#    Updated: 2024/11/13 18:44:54 by pibreiss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 	  
 BONUS_SRCS = $(BONUS_DIR)/ft_lstnew.c $(BONUS_DIR)/ft_lstadd_front.c \
+			$(BONUS_DIR)/ft_lstsize.c 
 
 OBJS = $(SRC:%.c=%.o)
 BONUS_OBJS = $(BONUS_SRCS:%.c=%.o)

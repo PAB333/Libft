@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_bonus.h                                      :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/13 15:54:47 by pibreiss          #+#    #+#             */
-/*   Updated: 2024/11/13 18:45:15 by pibreiss         ###   ########.fr       */
+/*   Created: 2024/11/13 18:43:47 by pibreiss          #+#    #+#             */
+/*   Updated: 2024/11/13 18:55:00 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_BONUS_H
-# define LIBFT_BONUS_H
+#include "libft_bonus.h"
 
-# include <stdlib.h>
-
-typedef struct s_list
+int	ft_lstsize(t_list *lst)
 {
-	void			*content;
-	struct s_list	*next;
-}					t_list;
+	int		count;
+	t_list	*current;
 
-t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new);
-int		ft_lstsize(t_list *lst);
-
-#endif
+	count = 0;
+	current = lst;
+	while (current != NULL)
+	{
+		current = current->next;
+		count++;
+	}
+	return (count);
+}
