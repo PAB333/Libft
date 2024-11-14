@@ -6,7 +6,7 @@
 #    By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/05 15:50:32 by pibreiss          #+#    #+#              #
-#    Updated: 2024/11/14 11:25:33 by pibreiss         ###   ########.fr        #
+#    Updated: 2024/11/14 11:32:44 by pibreiss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ BONUS_SRCS = $(BONUS_DIR)/ft_lstnew.c $(BONUS_DIR)/ft_lstadd_front.c \
 			$(BONUS_DIR)/ft_lstsize.c $(BONUS_DIR)/ft_lstlast.c \
 			$(BONUS_DIR)/ft_lstadd_back.c $(BONUS_DIR)/ft_lstdelone.c \
 			$(BONUS_DIR)/ft_lstclear.c $(BONUS_DIR)/ft_lstiter.c \
+			$(BONUS_DIR)/ft_lstmap.c 
 
 OBJS = $(SRC:%.c=%.o)
 BONUS_OBJS = $(BONUS_SRCS:%.c=%.o)
