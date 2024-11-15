@@ -6,14 +6,13 @@
 #    By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/05 15:50:32 by pibreiss          #+#    #+#              #
-#    Updated: 2024/11/14 11:32:44 by pibreiss         ###   ########.fr        #
+#    Updated: 2024/11/15 12:50:42 by pibreiss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-BONUS_DIR = _bonus
 SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	  ft_isdigit.c ft_isprint.c ft_memcpy.c ft_memmove.c ft_memset.c \
 	  ft_strlen.c ft_tolower.c ft_toupper.c ft_strlcpy.c ft_strlcat.c \
@@ -22,11 +21,9 @@ SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	  ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
 	  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 	  
-BONUS_SRCS = $(BONUS_DIR)/ft_lstnew.c $(BONUS_DIR)/ft_lstadd_front.c \
-			$(BONUS_DIR)/ft_lstsize.c $(BONUS_DIR)/ft_lstlast.c \
-			$(BONUS_DIR)/ft_lstadd_back.c $(BONUS_DIR)/ft_lstdelone.c \
-			$(BONUS_DIR)/ft_lstclear.c $(BONUS_DIR)/ft_lstiter.c \
-			$(BONUS_DIR)/ft_lstmap.c 
+BONUS_SRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+			ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
+			ft_lstmap.c \
 
 OBJS = $(SRC:%.c=%.o)
 BONUS_OBJS = $(BONUS_SRCS:%.c=%.o)

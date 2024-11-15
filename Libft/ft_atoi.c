@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:54:32 by pibreiss          #+#    #+#             */
-/*   Updated: 2024/11/06 14:52:42 by pibreiss         ###   ########.fr       */
+/*   Updated: 2024/11/15 15:51:41 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int	i;
-	int	result;
-	int	sign;
+	int				i;
+	unsigned long	result;
+	int				sign;
 
 	i = 0;
 	sign = 1;
@@ -31,8 +31,11 @@ int	ft_atoi(const char *nptr)
 	}
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		result *= 10;
-		result += nptr[i] - 48;
+		if (result > 9223372036854775807 && (sign == -1))
+			return (0);
+		if (result > 9223372036854775807 && (sign == 1))
+			return (-1);
+		result = result * 10 + (nptr[i] - 48);
 		i++;
 	}
 	return (result * sign);

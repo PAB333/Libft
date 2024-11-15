@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/13 18:58:00 by pibreiss          #+#    #+#             */
-/*   Updated: 2024/11/13 19:09:52 by pibreiss         ###   ########.fr       */
+/*   Created: 2024/11/13 19:11:54 by pibreiss          #+#    #+#             */
+/*   Updated: 2024/11/15 12:51:07 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*current;
 
-	current = lst;
-	if (lst == NULL)
-		return (NULL);
-	while (current->next != NULL)
-		current = current->next;
-	return (current);
+	if (*lst == NULL)
+		*lst = new;
+	else
+	{
+		current = *lst;
+		current = ft_lstlast(current);
+		current->next = new;
+	}
 }

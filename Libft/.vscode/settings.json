@@ -1,4 +1,7 @@
 {
     "github.copilot.editor.enableAutoCompletions": false,
-    "editor.insertSpaces": false
+    "editor.insertSpaces": false,
+    "files.associations": {
+        "libft.h": "c"
+    }
 }
