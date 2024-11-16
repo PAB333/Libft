@@ -12,41 +12,33 @@
 
 #include "libft.h"
 
-static int	is_word(char const *s, char c, int i)
-{
-	if (s[i] != c && (i == 0 || s[i - 1] == c))
-		return (1);
-	return (0);
-}
-
 static int	count_words(char const *s, char c)
 {
 	int		i;
 	int		count;
-
 	i = 0;
 	count = 0;
 	while (s[i])
 	{
-		if (is_word(s, c, i))
+		if (s[i] != c && (i == 0 || s[i - 1] == c))
 			count++;
 		i++;
 	}
 	return (count);
 }
 
-static char	*get_word(char const *s, char c, int *index)
+static char	*get_word(char const *s, char c, int *i)
 {
 	int		start;
 	int		end;
 	char	*word;
 
-	while (s[*index] && s[*index] == c)
-		(*index)++;
-	start = *index;
-	while (s[*index] && s[*index] != c)
-		(*index)++;
-	end = *index;
+	while (s[*i] && s[*i] == c)
+		(*i)++;
+	start = *i;
+	while (s[*i] && s[*i] != c)
+		(*i)++;
+	end = *i;
 	word = malloc(sizeof(char) * (end - start + 1));
 	if (!word)
 		return (NULL);
