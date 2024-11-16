@@ -16,6 +16,7 @@ static int	count_words(char const *s, char c)
 {
 	int		i;
 	int		count;
+
 	i = 0;
 	count = 0;
 	while (s[i])
